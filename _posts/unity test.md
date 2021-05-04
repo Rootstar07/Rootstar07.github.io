@@ -1,6 +1,6 @@
 ---
 title: Welcome to Jekyll
-categories: [unity]
+categories: [Unity]
 comments: true
 ---
 
