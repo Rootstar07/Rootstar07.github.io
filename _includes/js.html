@@ -6,8 +6,8 @@
         let supports = false;
         let theme = undefined;
 
-        if (hasLocalStorage === 'light') {
-            theme = 'light';
+        if (hasLocalStorage === 'dark') {
+            theme = 'dark';
         }
         if (hasLocalStorage === 'dark') {
             theme = 'dark';
@@ -17,12 +17,12 @@
             theme = hasLocalStorage ? hasLocalStorage : 'dark';
             supports = true;
         };
-        if (window.matchMedia(`(prefers_color: light)`).matches) {
-            theme = hasLocalStorage ? hasLocalStorage : 'light';
+        if (window.matchMedia(`(prefers_color: dark)`).matches) {
+            theme = hasLocalStorage ? hasLocalStorage : 'dark';
             supports = true;
         };
         if (window.matchMedia(`(prefers_color: no-preference)`).matches) {
-            theme = hasLocalStorage ? hasLocalStorage : 'light';
+            theme = hasLocalStorage ? hasLocalStorage : 'dark';
             supports = true;
         };
 
@@ -44,12 +44,12 @@
                 case 'dark':
                     toggle.checked = true;
                     html.classList.add('dark');
-                    html.classList.remove('light');
+                    html.classList.remove('dark');
                     break;
-                case 'light':
+                case 'dark':
                     toggle.checked = false;
                     html.classList.remove('dark');
-                    html.classList.add('light');
+                    html.classList.add('dark');
                     break;
             }
         }
@@ -57,12 +57,12 @@
         toggle.addEventListener('click', e => {
             if (toggle.checked) {
                 html.classList.add('dark');
-                html.classList.remove('light');
+                html.classList.remove('dark');
                 localStorage.setItem('theme', 'dark');
             } else {
                 html.classList.remove('dark');
-                html.classList.add('light');
-                localStorage.setItem('theme', 'light');
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
             }
         }, false);
     }, false);
