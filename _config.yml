@@ -1,4 +1,3 @@
-
 title: Catbook #Your awesome title
 email: #youremail@domain.com
 description: > # this means to ignore newlines until "baseurl"
@@ -18,7 +17,7 @@ google_analytics: #UA—XXXXXXXX-X
 disqus_shortname: #disqus shortname
 
 user:
-  name: Catbook
+  name: Rootstar
   pic: /assets/img/cat.jpg
   picAlt: "catbook"
   job: a category-centric theme
@@ -35,13 +34,13 @@ defaults:
       type: posts
     values:
       layout: post
-      comment: true   
+      comment: true
 
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-markdown: kramdown 
+markdown: kramdown
 
 # Filtering Content
 show_drafts: null
 limit_posts: 0
-future:      false
+future: false
 unpublished: false
